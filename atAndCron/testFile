@@ -1,0 +1,20 @@
+
+this is zhunian
+Created new window in existing browser session.
+[4221:4221:0822/092600:ERROR:browser_main_loop.cc(267)] Gtk: cannot open display: 
+
+(sublime_text:12636): Gtk-WARNING **: cannot open display: 
+
+Startup Error: Unable to detect graphics environment
+2016年 08月 23日 星期二 09:53:09 CST
+2016年 08月 23日 星期二 09:54:13 CST
+2016年 08月 23日 星期二 09:54:37 CST
+2016年 08月 23日 星期二 09:54:52 CST
+2016年 08月 23日 星期二 09:58:39 CST
+2016年 08月 23日 星期二 09:58:51 CST
+2016年 08月 23日 星期二 10:01:01 CST
+
+(sublime_text:6415): Gtk-WARNING **: cannot open display: 
+2016年 08月 23日 星期二 10:02:01 CST
+
+(sublime_text:6466): Gtk-WARNING **: cannot open display: 

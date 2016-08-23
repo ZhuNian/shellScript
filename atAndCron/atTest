@@ -1,0 +1,3 @@
+#!/bin/bash
+echo `date` >> /home/zhunian/Documents/learning/atAndCron/testFile
+nohup subl >> /home/zhunian/Documents/learning/atAndCron/testFile 2>&1 &

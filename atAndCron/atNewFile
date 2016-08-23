@@ -1,0 +1,2 @@
+#/bin/bash
+touch /home/zhunian/Document/learning/zhunian > /dev/null
