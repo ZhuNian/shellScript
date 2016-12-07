@@ -15,7 +15,7 @@ echo "creating component $name in $path with style $styleName...";
 
 jsTemplate="var m = require('m-react');
 var cn = require('utils/m/className');
-require('css/./index.css');
+require('./index.css');
 
 module.exports = m.createComponent({
 
@@ -31,13 +31,17 @@ scssTemplate=".$styleName {
 
 }";
 
+cssTemplate=".$styleName {
+
+}";
+
 specTemplate="var m = require('m-react');
 var Header = require('components/header');
 var $name = require('./index');
 
 module.exports = m.createComponent({
   title: '组件测试页：$name',
-
+  
   render(props, state) {
   
     return m('.test-page', [
@@ -46,7 +50,7 @@ module.exports = m.createComponent({
 
       m('.hl-separator'),
       
-      $name({
+      m($name, {
 
       })
     ]);
@@ -55,4 +59,4 @@ module.exports = m.createComponent({
 
 $(cd $path && mkdir $name) && echo "create dir $name succeed" || (echo "create dir $name failed"; exit 1)
 
-$(cd $path && cd $name && touch index.js && touch index.scss && touch spec.js && echo -e "$jsTemplate" > index.js && echo -e "$scssTemplate" > index.scss && echo -e "$specTemplate" > spec.js) && echo "congratuations! create a $name component with spec succeed" || $(echo "whoops! create $name component failed";rm -rf $name;exit 1)
+$(cd $path && cd $name && touch index.js && touch index.scss && touch index.css && touch spec.js && echo -e "$jsTemplate" > index.js && echo -e "$scssTemplate" > index.scss && echo -e "$cssTemplate" > index.css && echo -e "$specTemplate" > spec.js) && echo "congratuations! create a $name component with spec succeed" || $(echo "whoops! create $name component failed";rm -rf $name;exit 1)
