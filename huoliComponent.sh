@@ -18,6 +18,9 @@ var cn = require('utils/m/className');
 require('./index.css');
 
 module.exports = m.createComponent({
+  defaultProps: {
+
+  },
 
   render(props, state) {
 
@@ -42,6 +45,10 @@ var $name = require('./index');
 module.exports = m.createComponent({
   title: '组件测试页：$name',
   
+  getInitialState() {
+    return {};
+  },
+
   render(props, state) {
   
     return m('.test-page', [
