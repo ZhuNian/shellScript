@@ -23,18 +23,21 @@ read -p "please input the desc of your merge reques>> " desc
 lastCommit=$(git log -1 --pretty=%B)
 desc=${desc:-$lastCommit}
 
-read -p "please input the label of your request" label
+read -p "please input the label of your request>> " label
 label=${label:-feature}
 labels=();
 labels+=(${label})
 
 echo -e "creating merge request:
-project: ${REDCOL}$project${ENDCOL}
-projectName: ${BLUECOL}$projectName${ENDCOL}
+project:  ${REDCOL}$project${ENDCOL}
+projectName:  ${BLUECOL}$projectName${ENDCOL}
 sourceBranch: ${BLUECOL}$sourceBranch${ENDCOL}
 targetBranch: ${BLUECOL}$targetBranch${ENDCOL}
 title: ${BLUECOL}$title${ENDCOL} 
 desc: ${BLUECOL}$desc${ENDCOL}
 labels: ${BLUECOL}$labels${ENDCOL}"
 
-curl --header "PRIVATE-TOKEN: fwUBmDfesQGZQCxzvpUR" --data "source_branch=$sourceBranch&target_branch=$targetBranch&assignee_id=58&title=$title&description=$desc&labels=$labels" "http://gitlab.qtang.net/api/v3//projects/$project/merge_requests" 
+#xuyang id 58
+#yuyin id 57
+#zhengjie id 3
+curl --header "PRIVATE-TOKEN: fwUBmDfesQGZQCxzvpUR" --data "source_branch=$sourceBranch&target_branch=$targetBranch&assignee_id=58&title=$title&description=$desc&labels=$labels" "http://gitlab.huolih5.com/api/v3/projects/$project/merge_requests"
